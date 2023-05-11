@@ -25,3 +25,33 @@ npm i -g @nestjs/cli
 ```
 docker compose up -d
 ```
+
+5. Reconstruir BD con Seed
+
+Hacer petición **GET** a
+
+> http://localhost:3000/api/v2/seed
+
+la petición puede llevar los siguientes parametros
+
+```javascript
+{
+  "amount": number, //La cantidad de registros que se quieren obtener de la consulta
+  "clear": boolean, //Limpiar la BD de datos y/o insertar los nuevos registros
+  "drop":boolean //Limpia completamente la BD pero no inserta
+}
+```
+
+ejemplo:
+
+> http://localhost:3000/api/v2/seed?clear=true&amount=300
+
+sus valores por defecto:
+
+```javascript
+{
+  "amount": 20,
+  "clear": false,
+  "drop":false
+}
+```
