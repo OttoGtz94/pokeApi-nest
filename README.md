@@ -26,7 +26,13 @@ npm i -g @nestjs/cli
 docker compose up -d
 ```
 
-5. Reconstruir BD con Seed
+5. Clonar el archivo **.env.template** y nombrarlo **.env**.
+
+6. Ejecutar la aplicación en _dev_
+
+   > yarn start:dev
+
+7. Reconstruir BD con Seed
 
 Hacer petición **GET** a
 
